@@ -19,8 +19,8 @@ $app = new Slim\App([
         'cors' => [
             'origin' => getenv('CORS_ALLOW_ORIGIN'),
             'methods' => ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
-            'headers_allow' => ['X-Requested-With', 'Content-Type', 'Accept', 'Origin', 'Authorization'],
-            'headers_expose' => ['Authorization', 'Etag'],
+            'headers.allow' => ['X-Requested-With', 'Content-Type', 'Accept', 'Origin', 'Authorization'],
+            'headers.expose' => ['Authorization', 'Etag'],
             'credentials' => true,
             'cache' => 0,
         ],
