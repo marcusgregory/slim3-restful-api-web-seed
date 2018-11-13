@@ -18,6 +18,7 @@ built with the Slim 3 framework.
 * [Requirements](#requirements)
 * [Installation](#installation)
     * [Configuration](#configuration)
+        * [Configure Environment Variables](#configure-environment-variables)
 * [Documentation](#documentation)
     * [Controllers](#controllers)
     * [Models](#models)
@@ -50,8 +51,16 @@ composer create-project andrewdyer/slim3-skeleton project_name
 
 ### Configuration
 * Activate mod_rewrite, route all traffic to application's `/public` directory.
-* Set up the project environment by updating the .env file in the application's root directory.
-* Run all available migrations.
+* Set up the project environment. [Read More](#configure-environment-variables)
+* Run all available migrations. [Read More](#migrate-command)
+
+#### Configure Environment Variables
+While developing locally, you'll usually set all environment variables in a .env file in the application's root directory. On production, you have two options:
+
+* Create "real" environment variables. How you set environment variables, depends on your setup: they can be set at the command line, in your web server configuration, or via other methods provided by your hosting service.
+* Create a .env file just like your local development
+
+There is no significant advantage to either of the two options: use whatever is most natural in your hosting environment.
 
 ## Documentation
 
