@@ -21,10 +21,10 @@
         "robmorgan/phinx": "^0.10.0",
         "monolog/monolog": "^1.23",
         "symfony/console": "^4.1.0",
-        "symfony/dotenv": "^4.1.0",
         "tuupola/cors-middleware": "^0.7.0"
     },
     "require-dev": {
+        "symfony/dotenv": "^4.1.0",
         "symfony/var-dumper": "^4.1.0",
         "friendsofphp/php-cs-fixer": "^2.12"
     },

@@ -1,16 +1,22 @@
 <?php
 
+use Slim\App;
+use Symfony\Component\Dotenv\Dotenv;
+use Symfony\Component\Dotenv\Exception\PathException;
+
 require_once __DIR__.'/../vendor/autoload.php';
 
-try {
-    $dotenv = new Symfony\Component\Dotenv\Dotenv();
-    $dotenv->load(__DIR__.'/../.env');
-} catch (Symfony\Component\Dotenv\Exception\PathException $ex) {
-    echo $ex->getMessage();
-    exit(1);
+// The check is to ensure we don't use .env in production
+if (!getenv('APP_ENV')) {
+    try {
+        (new Dotenv())->load(__DIR__.'/../.env');
+    } catch (PathException $ex) {
+        echo $ex->getMessage();
+        exit(1);
+    }
 }
 
-$app = new Slim\App([
+$app = new App([
     'settings' => [
         'displayErrorDetails' => 'dev' === getenv('APP_ENV'),
         'app' => [
