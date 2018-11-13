@@ -60,7 +60,14 @@ While developing locally, you'll usually set all environment variables in a .env
 * Create "real" environment variables. How you set environment variables, depends on your setup: they can be set at the command line, in your web server configuration, or via other methods provided by your hosting service.
 * Create a .env file just like your local development
 
-There is no significant advantage to either of the two options: use whatever is most natural in your hosting environment.
+There is no significant advantage to either of the two options: use whatever is most natural in your hosting environment. 
+
+NOTE: If you use the .env file on production, you will need to move the symfony/dotenv dependency from require-dev to require in your composer.json file.
+
+```text
+composer remove symfony/dotenv
+composer require symfony/dotenv
+```
 
 ## Documentation
 
