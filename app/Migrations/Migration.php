@@ -3,8 +3,8 @@
 namespace App\Migrations;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
-use Phinx\Migration\AbstractMigration;
 use Illuminate\Database\Schema\MySqlBuilder as Schema;
+use Phinx\Migration\AbstractMigration;
 
 /**
  * Class Migration.
